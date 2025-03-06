@@ -7,7 +7,7 @@ import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { useLeadStore } from '@/store/leadStore';
-import { Lead, LeadStatus } from '@/types/lead';
+import {  LeadStatus } from '@/types/lead';
 
 export function LeadTable() {
   const { leads, isLoading, fetchLeads } = useLeadStore();

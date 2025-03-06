@@ -10,7 +10,7 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { useLeadStore } from '@/store/leadStore';
-import { CreateLeadDto, LeadStatus } from '@/types/lead';
+import { CreateLeadDto } from '@/types/lead';
 
 export function LeadForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -33,7 +33,7 @@ export function LeadForm() {
       //   title: 'Success',
       //   description: 'Lead created successfully',
       // });
-    } catch (error: any) {
+    } catch  {
       // toast({
       //   title: 'Error',
       //   description: error.response?.data?.message || 'Failed to create lead',

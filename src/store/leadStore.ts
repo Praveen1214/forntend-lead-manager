@@ -39,13 +39,12 @@ export const useLeadStore = create<LeadState>((set) => ({
         isLoading: false
       }));
       return newLead;
-    } catch (error: any) {
-      console.error('Error creating lead:', error);
+    } catch  {
+      console.error('Error creating lead:');
       set({ 
-        error: error.response?.data?.message || 'Failed to create lead', 
+        error:  'Failed to create lead', 
         isLoading: false 
       });
-      throw error;
     }
   }
 }));
