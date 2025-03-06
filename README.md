@@ -1,36 +1,111 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Lead Management System
 
-## Getting Started
+![Next.js](https://img.shields.io/badge/Next.js-15.2-blue.svg) ![Node.js](https://img.shields.io/badge/Node.js-18-green.svg) ![MongoDB](https://img.shields.io/badge/MongoDB-5.0-brightgreen.svg)
 
-First, run the development server:
+## 🚀 Project Description
+A simple Lead Management System with a **Next.js** frontend and a **Node.js (Express) backend**, using **MongoDB (Mongoose) for data storage.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+## 📌 Features
+### Backend (Node.js & Express)
+- **POST /leads** → Add a new lead
+- **GET /leads** → Fetch all leads
+- Uses  MongoDB (Mongoose) 
+- Lead Schema:
+  - `name` (string, required)
+  - `email` (string, required, unique)
+  - `status` (enum: "New", "Engaged", "Proposal Sent", "Closed-Won", "Closed-Lost")
+  - `createdAt` (timestamp)
+
+### Frontend (Next.js)
+- Displays the list of leads from the API
+- Provides a simple form to add a new lead
+
+## 🏗 Tech Stack
+- **Frontend:** Next.js (with TypeScript), Tailwind CSS, ShadCN
+- **Backend:** Node.js, Express
+- **Database:** MongoDB (Mongoose) 
+
+## 📦 Installation
+
+ **Clone the repository:**
+   
+
+
+1. **Backend Setup:**
+   ```sh
+    https://github.com/Praveen1214/backend-lead-manager.git
+   ```
+   ```sh
+   npm install
+   ```
+
+   Configure your `.env` file:
+   ```sh
+    MONGO_URI= mongodb+srv://carauctions:gTjMPvcst9S1CYvA@auctions.cknff.mongodb.net/test2
+   ```
+
+   Run the backend:
+   ```sh
+   npm run dev
+   ```
+
+2. **Frontend Setup:**
+
+   
+   ```sh
+   https://github.com/Praveen1214/forntend-lead-manager.git
+   ```
+
+   ```sh
+   npm install
+   ```
+
+   Configure your `.env.local` file:
+   ```sh
+   NEXT_PUBLIC_API_URL=http://localhost:5000/api
+   ```
+
+   Run the frontend:
+   ```sh
+   npm run dev
+   ```
+
+   Project will be available at [http://localhost:3000](http://localhost:3000)
+
+## 🚀 Deployment
+- **Frontend:** Deploy on Vercel
+- **Backend:** Deploy on Railway
+
+- URL - https://forntend-lead-manager.vercel.app/
+
+
+## 📜 Folder Structure
+```
+backend/
+├── config/
+├── controllers/
+├── models/
+├── routes/
+├── types/
+├── app.ts
+├── package.json
+└── tsconfig.json
+
+frontend/
+├── app/
+├── components/
+├── hooks/
+├── lib/
+├── store/
+├── types/
+├── public/
+├── package.json
+└── next.config.js
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## 📞 Contact
+For any inquiries, reach out via:
+- Email: dileepapraveen32@gmail.com
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
